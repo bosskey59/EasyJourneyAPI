@@ -908,3 +908,104 @@ Unpermitted parameter: :flight
 Completed 200 OK in 6686ms (Views: 20.5ms | ActiveRecord: 0.7ms)
 
 
+Started POST "/flights" for ::1 at 2018-11-04 10:04:46 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hyprul/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"houston", "to"=>"los angeles", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.89ms)
+Completed 200 OK in 8096ms (Views: 13.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/flights" for ::1 at 2018-11-04 10:05:13 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"london", "to"=>"houston", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.22ms)
+Completed 200 OK in 7089ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/flights" for ::1 at 2018-11-04 10:05:41 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san francisco", "to"=>"tokyo", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.97ms)
+Completed 200 OK in 6552ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/flights" for ::1 at 2018-11-04 10:07:55 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"los angeles", "to"=>"san antonio", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.73ms)
+Completed 200 OK in 8122ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/flights" for ::1 at 2018-11-04 10:14:36 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"los angeles", "to"=>"singapore", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.96ms)
+Completed 200 OK in 6967ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/flights" for ::1 at 2018-11-04 10:15:57 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"houston", "to"=>"los angeles", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.22ms)
+Completed 200 OK in 6584ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/flights" for ::1 at 2018-11-04 10:25:39 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"los angeles", "to"=>"houston", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.78ms)
+Completed 200 OK in 7978ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/flights" for ::1 at 2018-11-04 10:46:02 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"los angeles", "to"=>"osaka", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.36ms)
+Completed 200 OK in 8742ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/flights" for ::1 at 2018-11-04 11:08:56 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"houston", "to"=>"los angeles", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.32ms)
+Completed 200 OK in 7601ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/flights" for ::1 at 2018-11-04 11:09:53 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"houston", "to"=>"los angeles", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.1ms)
+Completed 200 OK in 7088ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/flights" for ::1 at 2018-11-04 11:11:18 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"houston", "to"=>"los angeles", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.46ms)
+Completed 200 OK in 7707ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
