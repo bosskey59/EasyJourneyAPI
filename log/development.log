@@ -1,0 +1,589 @@
+Started OPTIONS "/flights" for 127.0.0.1 at 2018-11-03 16:23:25 -0500
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateFlights (20181103210821)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "flights" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181103210821_create_flights.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181103210821"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-03 21:23:57.444477"], ["updated_at", "2018-11-03 21:23:57.444477"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started OPTIONS "/flights" for 127.0.0.1 at 2018-11-03 16:24:27 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/flights"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-03 16:24:58 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (17.2ms)
+Completed 200 OK in 58ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-03 16:24:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/rotes" for 127.0.0.1 at 2018-11-03 16:25:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/rotes"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 16:58:47 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+LoadError (cannot load such file -- unirest):
+  
+app/controllers/flights_controller.rb:2:in `<class:FlightsController>'
+app/controllers/flights_controller.rb:1:in `<main>'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 17:00:22 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"username"=>"alex", "pass"=>"what", "flight"=>{}}
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 17:03:35 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+LoadError (cannot load such file -- unirest):
+  
+app/controllers/flights_controller.rb:1:in `<main>'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 17:11:02 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+LoadError (cannot load such file -- unirest):
+  
+app/controllers/flights_controller.rb:1:in `<main>'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 17:15:47 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"username"=>"alex", "pass"=>"what", "flight"=>{}}
+Completed 204 No Content in 152583ms (ActiveRecord: 0.5ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 17:33:47 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"username"=>"alex", "pass"=>"what", "flight"=>{}}
+Completed 204 No Content in 602331ms (ActiveRecord: 0.8ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 17:44:05 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Completed 204 No Content in 1295442ms (ActiveRecord: 0.7ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 19:12:06 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 876924ms (ActiveRecord: 0.7ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/flights_controller.rb:7:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 19:27:59 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 21:21:19 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (10.11ms)
+Completed 200 OK in 3021ms (Views: 20.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 21:21:55 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.92ms)
+Completed 200 OK in 2949ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 21:49:28 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (14.04ms)
+Completed 200 OK in 3174ms (Views: 21.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 22:08:31 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (12.5ms)
+Completed 200 OK in 2066ms (Views: 17.7ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:07:20 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 2028ms (ActiveRecord: 0.5ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/flights_controller.rb:28:in `block in fetch_week'
+app/controllers/flights_controller.rb:24:in `times'
+app/controllers/flights_controller.rb:24:in `fetch_week'
+app/controllers/flights_controller.rb:16:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:07:54 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:12:32 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:16:33 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:19:07 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 275683ms (ActiveRecord: 0.4ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/flights_controller.rb:30:in `block in fetch_week'
+app/controllers/flights_controller.rb:23:in `times'
+app/controllers/flights_controller.rb:23:in `fetch_week'
+app/controllers/flights_controller.rb:15:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:23:55 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 2333ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:30:in `block in fetch_week'
+app/controllers/flights_controller.rb:23:in `times'
+app/controllers/flights_controller.rb:23:in `fetch_week'
+app/controllers/flights_controller.rb:15:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:25:36 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 2815ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:30:in `block in fetch_week'
+app/controllers/flights_controller.rb:23:in `times'
+app/controllers/flights_controller.rb:23:in `fetch_week'
+app/controllers/flights_controller.rb:15:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:27:03 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 2871ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:31:in `block in fetch_week'
+app/controllers/flights_controller.rb:23:in `times'
+app/controllers/flights_controller.rb:23:in `fetch_week'
+app/controllers/flights_controller.rb:15:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:28:02 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:39:34 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 3303ms (ActiveRecord: 0.4ms)
+
+
+  
+TypeError (no implicit conversion of Hash into Array):
+  
+app/controllers/flights_controller.rb:30:in `block in fetch_week'
+app/controllers/flights_controller.rb:23:in `times'
+app/controllers/flights_controller.rb:23:in `fetch_week'
+app/controllers/flights_controller.rb:15:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:40:18 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 3622ms (ActiveRecord: 0.8ms)
+
+
+  
+TypeError (no implicit conversion of Hash into Array):
+  
+app/controllers/flights_controller.rb:30:in `block in fetch_week'
+app/controllers/flights_controller.rb:23:in `times'
+app/controllers/flights_controller.rb:23:in `fetch_week'
+app/controllers/flights_controller.rb:15:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:41:18 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:43:29 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 3368ms (ActiveRecord: 0.6ms)
+
+
+  
+TypeError (no implicit conversion of Hash into Array):
+  
+app/controllers/flights_controller.rb:30:in `block in fetch_week'
+app/controllers/flights_controller.rb:23:in `times'
+app/controllers/flights_controller.rb:23:in `fetch_week'
+app/controllers/flights_controller.rb:15:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:45:49 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (33.19ms)
+Completed 200 OK in 6372ms (Views: 51.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:48:38 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (6.2ms)
+Completed 200 OK in 6433ms (Views: 12.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:55:17 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 6450ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `MinPrice' for #<Hash:0x00007f957d45d9f8>):
+  
+app/controllers/flights_controller.rb:32:in `block in fetch_week'
+app/controllers/flights_controller.rb:32:in `each'
+app/controllers/flights_controller.rb:32:in `sort_by'
+app/controllers/flights_controller.rb:32:in `fetch_week'
+app/controllers/flights_controller.rb:15:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-03 23:55:55 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (5.63ms)
+Completed 200 OK in 6086ms (Views: 15.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 00:01:41 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 900ms (ActiveRecord: 1.8ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:8:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 00:03:05 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 1275ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:8:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 00:03:40 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 566ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:8:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 00:08:46 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 533ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:8:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 00:09:32 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (6.76ms)
+Completed 200 OK in 6142ms (Views: 15.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 00:19:48 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 3665ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:29:in `block in fetch_week'
+app/controllers/flights_controller.rb:23:in `times'
+app/controllers/flights_controller.rb:23:in `fetch_week'
+app/controllers/flights_controller.rb:15:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 00:21:26 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (7.24ms)
+Completed 200 OK in 6525ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 00:38:50 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (9.28ms)
+Completed 200 OK in 7527ms (Views: 14.4ms | ActiveRecord: 10.8ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 00:42:22 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (6.58ms)
+Completed 200 OK in 5668ms (Views: 13.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 00:45:27 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (7.48ms)
+Completed 200 OK in 160822ms (Views: 16.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 00:48:08 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (6.11ms)
+Completed 200 OK in 6923ms (Views: 10.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 00:54:22 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (8.49ms)
+Completed 200 OK in 6741ms (Views: 14.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:09:24 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (6.97ms)
+Completed 200 OK in 102145ms (Views: 20.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:11:12 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (9.82ms)
+Completed 200 OK in 133293ms (Views: 22.1ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:18:29 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 1390ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `sort_by' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:16:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:19:31 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.38ms)
+Completed 200 OK in 6234ms (Views: 14.5ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:19:58 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.11ms)
+Completed 200 OK in 7391ms (Views: 7.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:27:21 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 5224ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `arr_carriers' for #<FlightsController:0x00007f957bfb6248>):
+  
+app/controllers/flights_controller.rb:41:in `block in fetch_week'
+app/controllers/flights_controller.rb:35:in `times'
+app/controllers/flights_controller.rb:35:in `fetch_week'
+app/controllers/flights_controller.rb:22:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:28:02 -0500
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.99ms)
+Completed 200 OK in 6040ms (Views: 8.6ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:28:51 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.83ms)
+Completed 200 OK in 6149ms (Views: 11.5ms | ActiveRecord: 0.6ms)
+
+
