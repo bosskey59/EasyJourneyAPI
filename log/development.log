@@ -1009,3 +1009,14 @@ Unpermitted parameter: :flight
 Completed 200 OK in 7707ms (Views: 1.8ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/flights" for ::1 at 2018-11-04 11:29:30 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/hyprul/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"los angeles", "to"=>"houston", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.72ms)
+Completed 200 OK in 7408ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
