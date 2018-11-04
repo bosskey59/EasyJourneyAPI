@@ -587,3 +587,178 @@ Processing by FlightsController#create as */*
 Completed 200 OK in 6149ms (Views: 11.5ms | ActiveRecord: 0.6ms)
 
 
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:42:05 -0600
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 0.8ms)
+
+
+  
+TypeError (no implicit conversion of Hash into String):
+  
+app/controllers/flights_controller.rb:48:in `get_place_ids'
+app/controllers/flights_controller.rb:5:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:43:16 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 1.6ms)
+
+
+  
+TypeError (no implicit conversion of Hash into String):
+  
+app/controllers/flights_controller.rb:48:in `get_place_ids'
+app/controllers/flights_controller.rb:5:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:44:30 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `get_places' for #<FlightsController:0x00007ff80b97ae18>
+Did you mean?  get_place_ids):
+  
+app/controllers/flights_controller.rb:5:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:44:44 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 0.7ms)
+
+
+  
+TypeError (no implicit conversion of Hash into String):
+  
+app/controllers/flights_controller.rb:48:in `get_places'
+app/controllers/flights_controller.rb:5:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:45:33 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.73ms)
+Completed 200 OK in 9178ms (Views: 16.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:46:30 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:54:52 -0600
+Completed 500 Internal Server Error in 502426ms (ActiveRecord: 1.0ms)
+
+
+  
+TypeError (no implicit conversion of Hash into String):
+  
+app/controllers/flights_controller.rb:48:in `get_places'
+app/controllers/flights_controller.rb:5:in `create'
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.65ms)
+Completed 200 OK in 18470ms (Views: 9.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:56:49 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.27ms)
+Completed 200 OK in 26863ms (Views: 8.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:57:25 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 01:57:53 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.5ms)
+Completed 200 OK in 586167ms (Views: 27.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 02:07:48 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 02:08:31 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.3ms)
+Completed 200 OK in 35047ms (Views: 19.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 02:11:57 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.32ms)
+Completed 200 OK in 8377ms (Views: 7.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 02:15:51 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+Completed 500 Internal Server Error in 3239ms (ActiveRecord: 0.8ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/flights_controller.rb:12:in `[]'
+app/controllers/flights_controller.rb:12:in `block in create'
+app/controllers/flights_controller.rb:12:in `each'
+app/controllers/flights_controller.rb:12:in `sort_by'
+app/controllers/flights_controller.rb:12:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 02:16:00 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+Completed 500 Internal Server Error in 1865ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/flights_controller.rb:12:in `[]'
+app/controllers/flights_controller.rb:12:in `block in create'
+app/controllers/flights_controller.rb:12:in `each'
+app/controllers/flights_controller.rb:12:in `sort_by'
+app/controllers/flights_controller.rb:12:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 02:16:23 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"to"=>"SFO", "from"=>"IAH", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (10.08ms)
+Completed 200 OK in 7878ms (Views: 15.9ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 02:18:31 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san antonio", "to"=>"miami", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.79ms)
+Completed 200 OK in 8282ms (Views: 8.5ms | ActiveRecord: 0.5ms)
+
+

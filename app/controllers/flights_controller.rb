@@ -2,19 +2,15 @@ require 'unirest'
 class FlightsController < ApplicationController
 
   def create
-    # get current day and add 8. fetch data for each of thiseTime.now.strftime("%m/%d/%Y")
+    from, to = get_places
     arr_carriers=[]
-    resp= Unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.mashape.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/2019-01-01",  headers:{"X-Mashape-Key"=>ENV["sky_key"],"X-Mashape-Host"=>"skyscanner-skyscanner-flight-search-v1.p.mashape.com"}, parameters: nil, auth:nil)
-    day=Hash.from_xml(resp.body)
-    arr_carriers.push(day["BrowseQuotesResponseAPIDto"]["Carriers"]["CarriersDto"])
-    day= day["BrowseQuotesResponseAPIDto"]["Quotes"]["QuoteDto"]
-    day= day.sort_by{|obj| obj["MinPrice"]}[0..4]
-    resp=Unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.mashape.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/2019-01",  headers:{"X-Mashape-Key"=>ENV["sky_key"],"X-Mashape-Host"=>"skyscanner-skyscanner-flight-search-v1.p.mashape.com"}, parameters: nil, auth:nil)
+    date=Time.now.strftime("%Y-%m")
+    resp=Unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.mashape.com/apiservices/browsequotes/v1.0/US/USD/en-US/#{from}/#{to}/#{date}",  headers:{"X-Mashape-Key"=>ENV["sky_key"],"X-Mashape-Host"=>"skyscanner-skyscanner-flight-search-v1.p.mashape.com"}, parameters: nil, auth:nil)
     month=Hash.from_xml(resp.body)
     arr_carriers.push(month["BrowseQuotesResponseAPIDto"]["Carriers"]["CarriersDto"])
     month= month["BrowseQuotesResponseAPIDto"]["Quotes"]["QuoteDto"]
     month= month.sort_by{|obj| obj["MinPrice"]}[0..4]
-    resp=Unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.mashape.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/anytime",  headers:{"X-Mashape-Key"=>ENV["sky_key"],"X-Mashape-Host"=>"skyscanner-skyscanner-flight-search-v1.p.mashape.com"}, parameters: nil, auth:nil)
+    resp=Unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.mashape.com/apiservices/browsequotes/v1.0/US/USD/en-US/#{from}/#{to}/anytime",  headers:{"X-Mashape-Key"=>ENV["sky_key"],"X-Mashape-Host"=>"skyscanner-skyscanner-flight-search-v1.p.mashape.com"}, parameters: nil, auth:nil)
     anytime=Hash.from_xml(resp.body)
     arr_carriers.push(anytime["BrowseQuotesResponseAPIDto"]["Carriers"]["CarriersDto"])
     anytime= anytime["BrowseQuotesResponseAPIDto"]["Quotes"]["QuoteDto"]
@@ -23,7 +19,7 @@ class FlightsController < ApplicationController
     arr_carriers.push(x)
     arr_carriers= arr_carriers.flatten.uniq
 
-    render json: { day: day, month:month, anytime: anytime, carriers:arr_carriers, week:week }
+    render json: { week: week , current_month: month, anytime: anytime, carriers: arr_carriers }
   end
 
 
@@ -44,6 +40,19 @@ class FlightsController < ApplicationController
     end
     arr_carriers= arr_carriers.flatten.uniq
     return day_arr.flatten.sort_by{|obj| obj["MinPrice"]}[0..4], arr_carriers
+  end
+
+  def get_places
+      to= flight_params["to"]
+      from= flight_params["from"]
+      resp=Unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.mashape.com/apiservices/autosuggest/v1.0/US/USD/en-US/?query=#{to}" ,  headers:{"X-Mashape-Key"=>ENV["sky_key"],"X-Mashape-Host"=>"skyscanner-skyscanner-flight-search-v1.p.mashape.com"}, parameters: nil, auth:nil)
+      x = Hash.from_xml(resp.body)
+      to_place_id= x["AutoSuggestServiceResponseApiDto"]["Places"]["PlaceDto"].first["PlaceId"]
+      resp=Unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.mashape.com/apiservices/autosuggest/v1.0/US/USD/en-US/?query=#{from}" ,  headers:{"X-Mashape-Key"=>ENV["sky_key"],"X-Mashape-Host"=>"skyscanner-skyscanner-flight-search-v1.p.mashape.com"}, parameters: nil, auth:nil)
+      x = Hash.from_xml(resp.body)
+      from_place_id= x["AutoSuggestServiceResponseApiDto"]["Places"]["PlaceDto"].first["PlaceId"]
+
+      return from_place_id, to_place_id
   end
 
   private
