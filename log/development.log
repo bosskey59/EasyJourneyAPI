@@ -762,3 +762,85 @@ Unpermitted parameter: :flight
 Completed 200 OK in 8282ms (Views: 8.5ms | ActiveRecord: 0.5ms)
 
 
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 07:45:52 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san antonio", "to"=>"miami", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.46ms)
+Completed 200 OK in 8060ms (Views: 17.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 07:53:27 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san antonio", "to"=>"miami", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+Completed 500 Internal Server Error in 2817ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:15:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 07:54:05 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san antonio", "to"=>"miami", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+Completed 500 Internal Server Error in 2719ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:15:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 07:54:49 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san antonio", "to"=>"miami", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+Completed 500 Internal Server Error in 1996ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:10:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 07:55:34 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san antonio", "to"=>"miami", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+Completed 500 Internal Server Error in 1738ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:10:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 07:55:49 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san antonio", "to"=>"miami", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+Completed 500 Internal Server Error in 1744ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:10:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 07:56:24 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san antonio", "to"=>"miami", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.73ms)
+Completed 200 OK in 6944ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
