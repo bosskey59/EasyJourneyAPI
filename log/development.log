@@ -844,3 +844,67 @@ Unpermitted parameter: :flight
 Completed 200 OK in 6944ms (Views: 40.0ms | ActiveRecord: 0.0ms)
 
 
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 09:53:31 -0600
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san francisco", "to"=>"los angeles", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+Completed 500 Internal Server Error in 3145ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:38:in `block in fetch_week'
+app/controllers/flights_controller.rb:31:in `times'
+app/controllers/flights_controller.rb:31:in `fetch_week'
+app/controllers/flights_controller.rb:18:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 09:54:56 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san francisco", "to"=>"los angeles", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+Completed 500 Internal Server Error in 242079ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:39:in `block in fetch_week'
+app/controllers/flights_controller.rb:31:in `times'
+app/controllers/flights_controller.rb:31:in `fetch_week'
+app/controllers/flights_controller.rb:18:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 09:59:15 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san francisco", "to"=>"los angeles", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 09:59:59 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/AlejandroAguilar/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san francisco", "to"=>"los angeles", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+Completed 500 Internal Server Error in 8304ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:46:in `block in fetch_week'
+app/controllers/flights_controller.rb:46:in `each'
+app/controllers/flights_controller.rb:46:in `sort_by'
+app/controllers/flights_controller.rb:46:in `fetch_week'
+app/controllers/flights_controller.rb:18:in `create'
+Started POST "/flights" for 127.0.0.1 at 2018-11-04 10:02:05 -0600
+Processing by FlightsController#create as */*
+  Parameters: {"from"=>"san francisco", "to"=>"los angeles", "flight"=>{}}
+Unpermitted parameter: :flight
+Unpermitted parameter: :flight
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.37ms)
+Completed 200 OK in 6686ms (Views: 20.5ms | ActiveRecord: 0.7ms)
+
+

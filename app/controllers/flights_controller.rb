@@ -35,11 +35,15 @@ class FlightsController < ApplicationController
       resp= Unirest.get("https://skyscanner-skyscanner-flight-search-v1.p.mashape.com/apiservices/browsequotes/v1.0/US/USD/en-US/#{from}/#{to}/#{date}",  headers:{"X-Mashape-Key"=>ENV["sky_key"],"X-Mashape-Host"=>"skyscanner-skyscanner-flight-search-v1.p.mashape.com"}, parameters: nil, auth:nil)
       day=Hash.from_xml(resp.body)
       arr_carriers.push(day["BrowseQuotesResponseAPIDto"]["Carriers"]["CarriersDto"])
-      day= day["BrowseQuotesResponseAPIDto"]["Quotes"]["QuoteDto"]
+      if day["BrowseQuotesResponseAPIDto"]["Quotes"] == nil
+        day= nil
+      else
+        day= day["BrowseQuotesResponseAPIDto"]["Quotes"]["QuoteDto"]
+      end
       day_arr.push(day)
     end
     arr_carriers= arr_carriers.flatten.uniq
-    return day_arr.flatten.sort_by{|obj| obj["MinPrice"]}[0..4], arr_carriers
+    return day_arr.compact.flatten.sort_by{|obj| obj["MinPrice"]}[0..4], arr_carriers
   end
 
   def get_places
